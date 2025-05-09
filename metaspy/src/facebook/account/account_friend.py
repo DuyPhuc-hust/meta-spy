@@ -17,7 +17,7 @@ class AccountFriend(BaseFacebookScraper):
     Scrape user's friends list
     """
 
-    def __init__(self, user_id: str, crawler: bool = False) -> None:
+    def __init__(self, user_id: str, crawler: bool = False, number_of_friends: int = 0) -> None:
         super().__init__(
             user_id, base_url=f"https://www.facebook.com/{user_id}/friends"
         )
